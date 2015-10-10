@@ -31,13 +31,17 @@ var StartScreen = React.createClass({
 
   getInitialState: function() {
     this._isMounted = true;
-    this._fetchRandomPhoto();
+    // this._fetchRandomPhoto();
     return {
       receiptSource: {uri: 'https://my73challenger.files.wordpress.com/2010/11/bs-car-receipt.jpg'},
       originalImageSourceUri: 'logo.jpg',
       editorSize: null,
       drawingMode: true
     };
+  },
+
+  componentDidMount: function() {
+    this._fetchRandomPhoto();
   },
 
   _fetchRandomPhoto: function() {

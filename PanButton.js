@@ -5,6 +5,7 @@ var {
   StyleSheet,
   PanResponder,
   View,
+  processColor,
 } = React;
 
 var CIRCLE_SIZE = 60;
@@ -75,13 +76,13 @@ var PanButton = React.createClass({
 
   _highlight: function() {
     this.circle && this.circle.setNativeProps({
-      backgroundColor: CIRCLE_HIGHLIGHT_COLOR
+      backgroundColor: processColor(CIRCLE_HIGHLIGHT_COLOR)
     });
   },
 
   _unHighlight: function() {
     this.circle && this.circle.setNativeProps({
-      backgroundColor: CIRCLE_COLOR
+      backgroundColor: processColor(CIRCLE_COLOR)
     });
   },
 
